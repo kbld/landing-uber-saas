@@ -1,75 +1,20 @@
 $(document).ready(function () {
-  var customContainer = jQuery(".iso-container");
-  customContainer.isotope({
-    filter: "*",
-  });
-
-  jQuery("#custom-filter li:first-child > a").addClass("is-checked");
-
-  jQuery("#custom-filter a").click(function () {
-    jQuery("#custom-filter .is-checked").removeClass("is-checked");
-    jQuery(this).addClass("is-checked");
-
-    var customSelector = jQuery(this).attr("data-filter");
-    customContainer.isotope({
-      filter: customSelector,
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+      if (scroll > 90) {
+        $(".navbar").css("position", "fixed");
+        $(".navbar").css("padding", "37px 50px");
+        var styleElem = document.head.appendChild(
+          document.createElement("style")
+        );
+        styleElem.innerHTML = ".navbar {background: #000;}";
+      } else {
+        $(".navbar").css("position", "absolute");
+        $(".navbar").css("padding", "57px 50px");
+        var styleElem = document.head.appendChild(
+          document.createElement("style")
+        );
+        styleElem.innerHTML = ".navbar {background :linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7497313753581663) 31%, rgba(0,0,0,1) 98%);;}";
+      }
     });
-    return false;
   });
-});
-
-$(document).ready(function () {
-  $(".filter-button").click(function () {
-    var value = $(this).attr("data-filter");
-    if (value == "all") {
-      $(".filter").show();
-    } else {
-      $(".filter")
-        .not("." + value)
-        .hide();
-      $(".filter")
-        .filter("." + value)
-        .show();
-    }
-    if ($(".filter-button").removeClass("active")) {
-      $(this).addClass("active");
-    }
-  });
-  $(this).addClass("active");
-});
-
-$(document).ready(function () {
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    if (scroll > 64) {
-      $(".navbar").css("position", "fixed");
-      $(".navbar").css("background", "#fff");
-      $(".navbar").css("box-shadow", "0 2px 10px 0 rgba(0, 0, 0, 0.15)");
-      $(".link-title").css("color", "#000");
-      $(".logo").css("fill", "#000");
-      $(".link-title:before").css("background", "#000");
-      var styleElem = document.head.appendChild(
-        document.createElement("style")
-      );
-      styleElem.innerHTML = ".link-title:before {background: #000;}";
-    } else {
-      $(".navbar").css("position", "absolute");
-      $(".navbar").css("background", "rgb(255, 255, 255, 0)");
-      $(".navbar").css("box-shadow", "none");
-      $(".link-title").css("color", "#fff");
-      $(".logo").css("fill", "#fff");
-      $(".link-title:before").css("background", "#fff");
-      var styleElem = document.head.appendChild(
-        document.createElement("style")
-      );
-      styleElem.innerHTML = ".link-title:before {background: #fff;}";
-    }
-  });
-});
-
-
-
-
-
-
-
