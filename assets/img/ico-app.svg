@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 6900 6900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-41538.6,-234035)">
+        <g transform="matrix(1,0,0,1,6914.35,75826.9)">
+            <g transform="matrix(1,0,0,1,-6914.35,-75826.9)">
+                <path d="M48438.6,235469C48438.6,235088 48287.6,234724 48018.8,234455C47749.9,234186 47385.3,234035 47005.2,234035C45823,234035 44154.1,234035 42972,234035C42591.8,234035 42227.2,234186 41958.4,234455C41689.6,234724 41538.6,235088 41538.6,235469C41538.6,236651 41538.6,238320 41538.6,239502C41538.6,239882 41689.6,240247 41958.4,240515C42227.2,240784 42591.8,240935 42972,240935C44154.1,240935 45823,240935 47005.2,240935C47385.3,240935 47749.9,240784 48018.8,240515C48287.6,240247 48438.6,239882 48438.6,239502C48438.6,238320 48438.6,236651 48438.6,235469Z"/>
+            </g>
+        </g>
+        <g transform="matrix(5.55556,0,0,3.125,41538.6,234035)">
+            <g transform="matrix(0.963906,0,0,0.963906,16.1717,-27.081)">
+                <g transform="matrix(1.23546,0,0,2.13318,-51503.6,-503758)">
+                    <text x="41829.6px" y="236605px" style="font-family:'Montserrat-SemiBold', 'Montserrat';font-weight:600;font-size:229.571px;fill:white;">U<tspan x="42021.7px 42207.5px 42372.3px " y="236605px 236605px 236605px ">BER</tspan></text>
+                </g>
+                <g transform="matrix(1.41835,0,0,2.44895,-59159.3,-578494)">
+                    <text x="41829.6px" y="236835px" style="font-family:'Montserrat-SemiBold', 'Montserrat';font-weight:600;font-size:229.571px;fill:white;">E<tspan x="41994.4px 42169.6px 42317.2px " y="236835px 236835px 236835px ">ATS</tspan></text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(5.55556,0,0,3.125,41538.6,234035)">
+            <g transform="matrix(0.674667,0,0,1.1649,-27936.5,-274132)">
+                <text x="41698.2px" y="236835px" style="font-family:'Montserrat-Medium', 'Montserrat';font-weight:500;font-size:229.571px;fill:rgb(54,220,164);">P<tspan x="41872.7px 42050.7px 42215.5px 42445.8px 42527.9px 42720.6px " y="236835px 236835px 236835px 236835px 236835px 236835px ">REMIUM</tspan></text>
+            </g>
+        </g>
+    </g>
+</svg>

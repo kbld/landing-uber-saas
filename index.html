@@ -10,7 +10,7 @@
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <link rel="stylesheet" href="/assets/css/style.css">
     <script type="text/javascript" src="/assets/js/script.js"></script>
-    
+
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
@@ -27,9 +27,11 @@
     <link rel="manifest" href="/assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+    <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
 
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
     <title>Uber Eats Premium</title>
 </head>
 
@@ -37,43 +39,78 @@
     <header>
         <div class="navbar">
             <div class="box-navbar">
-                <a href="/html/index.html">
-                    <svg class="logo" width="100%" height="100%" viewBox="0 0 3444 205" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-                        <g transform="matrix(1,0,0,1,-101367,-166516)">
-                            <g transform="matrix(1,0,0,1,66183.8,9268.2)">
-                                <g transform="matrix(1,0,0,1,-65057.4,-9295.49)">
-                                    <g transform="matrix(1.02963,0,0,1,-2968.92,0)">
-                                        <text x="100212px" y="166745px" style="font-family:'Montserrat-Medium', 'Montserrat';font-weight:500;font-size:285px;fill:white;">U<tspan x="100451px 100680px 100885px 101106px 101196px 101401px 101613px 101792px " y="166745px 166745px 166745px 166745px 166745px 166745px 166745px 166745px ">BER EATS</tspan></text>
-                                    </g>
-                                    <g transform="matrix(1.02963,0,0,1,-3025.69,0)">
-                                        <text x="102128px" y="166745px" style="font-family:'Montserrat-Medium', 'Montserrat';font-weight:500;font-size:285px;fill:rgb(54,220,164);">P<tspan x="102345px 102565px 102770px 103056px 103158px 103397px " y="166745px 166745px 166745px 166745px 166745px 166745px ">REMIUM</tspan></text>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </a>
-
+                <a class="logo"href="/index.html"></a>
             </div>
         </div>
     </header>
 
     <div class="main-background">
-    </div>
+        <div class="box-main">
+            <h1 class="main-title">Bienvenue sur votre nouveau site<br>Uber Eats Premium</h1>
 
-    <div class="box-delivery">
-
-    </div>
-
-
-
-
-
-    <footer>
-        <div class="box-footer">
-<h3 class="title-copyright">© 2022 Killian Blanchard</h3>
         </div>
+      
+    </div>
+
+    <img src="assets/img/img-separator-white.png" class="img-separator-main">
+
+
+
+    <div class="box-restaurant">
+        <img class="img-mockup" src="/assets/img/img-restaurant.png">
+        <h2 class="title-restaurant">Commandez dans toute la france parmi plus de 25 000 restaurants premium.</h2>
+    </div>
+
+    <img src="assets/img/img-separator-green-up.png" class="img-separator">
+
+    <div class="box-green">
+        <div class="mainbox-countdown">
+            <h1 class="title-countdown">Uber Eats Premium sera disponible dans :</h1>
+            <div class="box-countdown" id="countdown">
+                <ul>
+                    <li class="box-count"><span class="count-number" id="days"></span> Jours</li>
+                    <li class="box-count"><span class="count-number" id="hours"></span> Heures</li>
+                    <li class="box-count"><span class="count-number" id="minutes"></span> Minutes</li>
+                    <li class="box-count"><span class="count-number" id="seconds"></span> Secondes</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <img src="assets/img/img-separator-green-bottom.png" class="img-separator">
+
+    <div class="box-app">
+        <div class="box-app-title">
+            <img src="assets/img/ico-app.svg" class="img-mobile-app">
+            <h1 class="txt-app-download">Pré-Téléchargez notre nouvelle app gratuitement.</h1>
+        </div>
+        <div class="box-icon-store">
+            <img class="link-app" src="/assets/img/playstore.png">
+            <img class="link-app" src="/assets/img/appstore.png">
+        </div>
+    </div>
+
+    <img src="assets/img/img-separator-black-bottom.png" class="img-separator ">
+
+    <footer class="footer">
+        <div class="box-footer">
+                <div class="box-logo">
+                    <a class="logo-footer"></a>    
+                </div>
+                <div class="main-box-link-footer">
+                    <div class="box-link-footer">
+                        <h3 class="title-copyright">© 2022 Killian Blanchard</h3>
+                    </div>
+                    <div class="box-link-footer-right">
+                        <li class="link-footer"><a target="_blank" href="https://twitter.com/ubereats">Twitter</a></li>
+                        <li class="link-footer"><a target="_blank" href="https://www.facebook.com/UberEats/">Facebook</a></li>
+                        <li class="link-footer"><a target="_blank" href="https://www.instagram.com/ubereats/">Instagram</a></li>
+                        <li class="link-footer"><a target="_blank" href="https://www.youtube.com/c/UberEATS/featured">Youtube</a></li>
+                        <li class="link-footer"><a>Confidentialité</a></li>
+                    </div>
+            </div>
     </footer>
+
 
 </body>
 
