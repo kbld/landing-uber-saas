@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <script type="text/javascript" src="/assets/js/script.js"></script>
-
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
@@ -27,57 +25,142 @@
     <link rel="manifest" href="/assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
-    <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
-
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    
 
     <title>Uber Eats Premium</title>
 </head>
 
 <body>
+
     <header>
         <div class="navbar">
             <div class="box-navbar">
-                <a class="logo"href="/index.html"></a>
+                <a class="logo" href="/index.html"></a>
             </div>
         </div>
     </header>
 
     <div class="main-background">
         <div class="box-main">
-            <h1 class="main-title">Bienvenue sur votre nouveau site<br>Uber Eats Premium</h1>
-
+            <h1 class="main-title">Bienvenue sur notre nouveau site<br>Uber Eats Premium</h1>
+            <h1 class="title-newsletter">Inscrivez-vous à notre newsletter pour<br>connaitre toutes notre actualité</h1>
+            <input class="input-newsletter" placeholder="Votre Email" />
+            <button class="button-newsletter">Je m'abonne</button>
         </div>
-      
     </div>
 
     <img src="assets/img/img-separator-white.png" class="img-separator-main">
 
-
-
     <div class="box-restaurant">
-        <img class="img-mockup" src="/assets/img/img-restaurant.png">
-        <h2 class="title-restaurant">Commandez dans toute la france parmi plus de 25 000 restaurants premium.</h2>
+        <img class="img-mockup reveal" src="/assets/img/iphone-app-mockup.png">
+        <div class="box-text-app">
+            <h2 class="title-restaurant reveal-title">Commandez dans toute la France parmi plus de 25 000 restaurants premium</h2>
+            <h2 class="soustitle-restaurant reveal-p">Trouvez les meilleurs restaurants qui livrent des repas à domicile.
+                Faites-vous livrer sans contact vos plats préférés, vos courses et bien plus encore ! Commandez des
+                repas en ligne ou via l'application Uber Eats Premium et soutenez les restaurants de votre quartier.
+            </h2>
+        </div>
     </div>
 
-    <img src="/assets/img/img-serarator-white-green-top.png" class="img-separator img-separator-green-bottom">
-
     <div class="box-green">
+        <img src="/assets/img/img-separator-white-green-top.png" class="img-separator">
         <div class="mainbox-countdown">
             <h1 class="title-countdown">Uber Eats Premium sera disponible dans :</h1>
             <div class="box-countdown" id="countdown">
                 <ul>
-                    <li class="box-count"><span class="count-number" id="days"></span> Jours</li>
-                    <li class="box-count"><span class="count-number" id="hours"></span> Heures</li>
-                    <li class="box-count"><span class="count-number" id="minutes"></span> Minutes</li>
-                    <li class="box-count"><span class="count-number" id="seconds"></span> Secondes</li>
+                    <li class="box-count"><span class="count-number" id="days">00</span>Jours</li>
+                    <li class="box-count"><span class="count-number" id="hours">00</span>Heures</li>
+                    <li class="box-count"><span class="count-number" id="minutes">00</span>Minutes</li>
+                    <li class="box-count"><span class="count-number" id="seconds">00</span>Secondes</li>
                 </ul>
+            </div>
+        </div>
+        <img src="/assets/img/img-separator-white-green-bottom.png" class="img-separator">
+    </div>
+
+    <div class="main-box-faq">
+        <div class="box-faq">
+            <h1 class="title-faq">Questions fréquemment posées</h1>
+            <div class="wrapper">
+                <div class="list-item">
+                    <input class="trigger-input" id="faq-title-1" type="checkbox">
+                    <div class="trigger-wrapper">
+                        <label for="faq-title-1">
+                            <h2 class="faq-title">Comment fonctionne la livraison sans contact ?
+                            </h2>
+                        </label>
+                        <p class="faq-content">Limiter le contact physique est essentiel pour empêcher la propagation
+                            du COVID-19. La livraison sans contact de Uber Eats Premium signifie que votre livreur
+                            récupérera votre commande au restaurant sans entrer en contact avec le personnel du restaurant. Puis, une
+                            fois arrivé devant chez vous, il posera la commande devant votre porte, reculera d’au moins 2
+                            mètres et attendra que vous la récupériez en toute sécurité. </p>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <input class="trigger-input" id="faq-title-2" type="checkbox">
+                    <div class="trigger-wrapper">
+                        <label for="faq-title-2">
+                            <h2 class="faq-title">Quels sont les frais sur Uber Eats Premium ?</h2>
+                        </label>
+                        <p class="faq-content">
+                            <br> <span class="faq-content-title">Frais de livraison </span><br><br>
+                            Les frais de livraison varient en fonction de votre emplacement et de la distance parcourue.
+                            Vous pourrez toujours consulter le montant des frais de livraison avant de choisir où passer
+                            commande. Certains restaurants disposent également de leur propre service de livraison : dans ce cas,
+                            ils fixent eux-mêmes leurs frais.
+
+                            <br><br><span class="faq-content-title">Frais de service </span><br><br>
+
+                            Les frais de service nous permettent d'optimiser votre expérience sur Uber Eats Premium,
+                            notamment via de nouvelles fonctionnalités et une assistance optimale. Ils sont calculés en fonction du
+                            total de votre commande (avant l'application de toute promotion ou réduction).
+                            Des montants minimum et maximum peuvent s'appliquer. Vous pourrez toujours consulter le
+                            montant des frais de service avant de régler votre commande.
+
+                            <br><br><span class="faq-content-title">Frais additionnels</span><br><br>
+
+                            Lorsque le montant total de votre commande est inférieur au minimum fixé par le restaurant,
+                            vous pouvez toujours commander mais nous y ajouterons des frais. Pour les supprimer, ajoutez
+                            d'autres articles à votre panier.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <input class="trigger-input" id="faq-title-3" type="checkbox">
+                    <div class="trigger-wrapper">
+                        <label for="faq-title-3">
+                            <h2 class="faq-title">Comment commander sur Uber Eats Premium ?</h2>
+                        </label>
+                        <p class="faq-content">Vous pouvez commander soit sur le site, soit via l'application mobile
+                            Uber Eats Premium, disponible sur iOS et Android. Saisissez simplement votre code postal
+                            pour trouver
+                            tous les restaurants disponibles dans votre quartier, choisissez vos plats et passez votre
+                            commande. Une fois que le restaurant aura reçu votre commande, celle-ci sera préparée et soigneusement
+                            emballée. Une fois votre commande prête, un coursier Uber Eats Premium viendra la chercher
+                            et vous l'apporter. Si vous voulez vous organiser de manière optimale, vous pouvez également passer votre
+                            commande jusqu'à 24 heures à l'avance et planifier une livraison à l'heure de votre choix</p>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <input class="trigger-input" id="faq-title-4" type="checkbox">
+                    <div class="trigger-wrapper">
+                        <label for="faq-title-4">
+                            <h2 class="faq-title">Vous souhaiter nous contacter ?</h2>
+                        </label>
+                        <p class="faq-content">Nous avons en place des équipes dédiées prêtes à accompagner nos clients
+                            ainsi que les livreurs et restaurants partenaires pendant cette période difficile. N'hésitez
+                            pas à nous envoyer un e-mail à support@ubereatspremium.fr. Vous pouvez aussi envoyer un message
+                            directement depuis l'application ou via Twitter et Facebook.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <img src="/assets/img/img-serarator-white-green-bottom.png" class="img-separator img-separator-green">
 
     <div class="box-app">
         <div class="box-app-title">
@@ -90,24 +173,29 @@
         </div>
     </div>
 
+
+
     <img src="assets/img/img-separator-black-bottom.png" class="img-separator ">
 
     <footer class="footer">
         <div class="box-footer">
-                <div class="box-logo">
-                    <a class="logo-footer"></a>    
+            <div class="box-logo">
+                <a class="logo-footer"></a>
+            </div>
+            <div class="box-copyrightpluslink">
+                <div class="box-link-footer">
+                    <h3 class="title-copyright">© 2022 Killian Blanchard</h3>
                 </div>
-                <div class="main-box-link-footer">
-                    <div class="box-link-footer">
-                        <h3 class="title-copyright">© 2022 Killian Blanchard</h3>
-                    </div>
-                    <div class="box-link-footer-right">
-                        <li class="link-footer"><a target="_blank" href="https://twitter.com/ubereats">Twitter</a></li>
-                        <li class="link-footer"><a target="_blank" href="https://www.facebook.com/UberEats/">Facebook</a></li>
-                        <li class="link-footer"><a target="_blank" href="https://www.instagram.com/ubereats/">Instagram</a></li>
-                        <li class="link-footer"><a target="_blank" href="https://www.youtube.com/c/UberEATS/featured">Youtube</a></li>
-                        <li class="link-footer"><a>Confidentialité</a></li>
-                    </div>
+                <div class="box-link-footer-right">
+                    <li class="link-footer"><a target="_blank" href="https://twitter.com/ubereats">Twitter</a></li>
+                    <li class="link-footer"><a target="_blank" href="https://www.facebook.com/UberEats/">Facebook</a>
+                    </li>
+                    <li class="link-footer"><a target="_blank" href="https://www.instagram.com/ubereats/">Instagram</a>
+                    </li>
+                    <li class="link-footer"><a target="_blank"
+                            href="https://www.youtube.com/c/UberEATS/featured">Youtube</a></li>
+                    <!-- <li class="link-footer"><a>Confidentialité</a></li> -->
+                </div>
             </div>
     </footer>
 
