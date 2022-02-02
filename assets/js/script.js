@@ -71,3 +71,32 @@ function reveal() {
 
 
 */
+
+
+
+
+const decompteDateFinale = new Date("march 1, 2022 00:00:00").getTime();
+
+function decompte() {
+  let now = new Date().getTime();
+  let gap = decompteDateFinale - now;
+
+  let seconde = 1000;
+  let minute = seconde * 60;
+  let heure = minute * 60;
+  let jour = heure * 24;
+
+  let j = Math.floor(gap / jour);
+  let h = Math.floor((gap % jour) / heure);
+  let m = Math.floor((gap % heure) / minute);
+  let s = Math.floor((gap % minute) / seconde);
+
+  document.getElementById("jour").innerText = j;
+  document.getElementById("heure").innerText = h;
+  document.getElementById("minute").innerText = m;
+  document.getElementById("seconde").innerText = s;
+}
+
+setInterval(function () {
+decompte();
+}, 1000);
