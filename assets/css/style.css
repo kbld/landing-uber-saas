@@ -197,49 +197,6 @@ li {
 
 /* DOWNLOAD */
 
-/* MOCKUP */
-
-.box-restaurant {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  display: flex;
-  margin: 0 auto;
-  background-color: var(--color-white);
-  max-width: 1200px;
-  padding: 60px 50px;
-}
-
-.img-mockup {
-  width: 350px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  background-color: var(--color-white);
-  border-radius: 5px;
-  transform: rotate(-0deg);
-  object-fit: contain;
-}
-
-.title-restaurant {
-  color: var(--color-black);
-  font-size: 32px;
-  text-align: left;
-  font-weight: 600;
-  margin-left: 100px;
-}
-
-.soustitle-restaurant {
-  color: var(--color-black);
-  font-size: 22px;
-  text-align: left;
-  font-weight: 400;
-  margin-left: 100px;
-  margin-top: 30px;
-}
-
-/* MOCKUP */
-
 /* COUNTDOWN */
 
 .box-countdown {
@@ -416,7 +373,6 @@ li {
   margin: 0 auto;
   background-color: var(--color-white);
   border-radius: 5px;
-  transform: rotate(-0deg);
   object-fit: contain;
 }
 
@@ -426,6 +382,7 @@ li {
   text-align: left;
   font-weight: 600;
   margin-left: 100px;
+  opacity: 1;
 }
 
 .soustitle-restaurant {
