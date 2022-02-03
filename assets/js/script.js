@@ -1,3 +1,5 @@
+// FAQ FUNCTION
+
 function reveal() {
   var reveals = document.querySelectorAll(".reveal, .reveal-title, .reveal-p ");
 
@@ -13,6 +15,8 @@ function reveal() {
     }
   }
 }
+
+// COUNTDOWN FUNCTION
 
 window.addEventListener("scroll", reveal);
 
@@ -41,3 +45,42 @@ function decompte() {
 setInterval(function () {
   decompte();
 }, 1000);
+
+// ANIMATION OPACITY ON SCROLL
+
+$(function () {
+  divFade = $(".title-restaurant, .soustitle-restaurant");
+
+  var toggleHeader = function (noAnimate) {
+    var threshold = 400,
+      fadeLength = 300,
+      opacity,
+      scrollTop = $(document).scrollTop();
+
+    if (scrollTop < threshold) {
+      opacity = 0;
+    } else if (scrollTop > threshold + fadeLength) {
+      opacity = 1;
+    } else {
+      if (noAnimate) {
+        opacity = 1;
+      } else {
+        opacity = (scrollTop - threshold) / fadeLength;
+      }
+    }
+
+    divFade.css("opacity", opacity);
+  };
+
+  toggleHeader(true);
+  $(window).scroll(function () {
+    toggleHeader();
+  });
+});
+
+/*
+  transform: matrix(1, 0, 0, 1, 0, 100); opacity: 0;
+to
+  transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;
+
+  */
