@@ -57,13 +57,13 @@ li {
   margin: 0 auto;
   padding: 10px 0 10px 0;
   width: 230px;
-  background: url("/img/UEPREMIUM-logo.svg") center no-repeat;
+  background: url("../img/UEPREMIUM-logo.svg") center no-repeat;
 }
 
 /* MAIN BACKGROUND */
 
 .main-background {
-  background-image: url("/img/img-back-3.png");
+  background-image: url("../img/img-back-3.png");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -419,7 +419,7 @@ li {
   display: block;
   padding: 10px 0;
   width: 240px;
-  background: url("/img/UEPREMIUM-logo-white.svg") center no-repeat;
+  background: url("../img/UEPREMIUM-logo-white.svg") center no-repeat;
   fill: var(--color-white);
 }
 
@@ -470,7 +470,7 @@ li {
 
 @media only screen and (max-width: 787px) {
   .main-background {
-    background-image: url("/img/img-back-mobile.png");
+    background-image: url("../img/img-back-mobile.png");
     height: 1000px;
   }
   .img-mobile-app {
@@ -512,7 +512,7 @@ li {
   }
 
   .box-green {
-    background-image: url("/img/zone-green-mobile.png");
+    background-image: url("../img/zone-green-mobile.png");
   }
 
   .img-mockup {
