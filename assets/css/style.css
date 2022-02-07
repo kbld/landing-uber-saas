@@ -212,7 +212,7 @@ li {
 }
 
 .box-green {
-  background-image: url("img/zone-green.png");
+  background-image: url("./assets/img/zone-green.png");
   background-position: center;
   background-size: cover;
 }
