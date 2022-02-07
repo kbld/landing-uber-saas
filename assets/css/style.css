@@ -158,11 +158,6 @@ li {
   vertical-align: bottom;
 }
 
-.box-text-app {
-  display: block;
-  justify-content: space-between;
-  padding: 120px 20px;
-}
 
 .box-app {
   background-color: var(--color-white);
@@ -367,7 +362,7 @@ li {
 }
 
 .img-mockup {
-  width: 350px;
+  width: 450px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -381,7 +376,6 @@ li {
   font-size: 32px;
   text-align: left;
   font-weight: 600;
-  margin-left: 100px;
   opacity: 1;
 }
 
@@ -390,8 +384,13 @@ li {
   font-size: 22px;
   text-align: left;
   font-weight: 400;
-  margin-left: 100px;
   margin-top: 30px;
+}
+
+.box-text-app {
+  display: block;
+  justify-content: space-between;
+  padding: 220px 20px;
 }
 
 /* MOCKUP */

@@ -49,34 +49,32 @@ setInterval(function () {
 // ANIMATION OPACITY ON SCROLL
 
 $(function () {
-  divFade = $(".title-restaurant, .soustitle-restaurant");
+  divFade = $(".title-restaurant, .soustitle-restaurant"); // select the element
 
-  var toggleHeader = function (noAnimate) {
-    var threshold = 400,
-      fadeLength = 300,
-      opacity,
-      scrollTop = $(document).scrollTop();
-
-    if (scrollTop < threshold) {
-      opacity = 0;
-    } else if (scrollTop > threshold + fadeLength) {
-      opacity = 1;
-    } else {
-      if (noAnimate) {
-        opacity = 1;
-      } else {
-        opacity = (scrollTop - threshold) / fadeLength;
+  var toggleHeader = function (noAnimate) { // function to toggle the header
+    var threshold = 400, // Délai d'affichage en ms
+      fadeLength = 300, // Longueur fondu animation
+      opacity, // Opacité
+      scrollTop = $(document).scrollTop(); // Position du scroll
+    if (scrollTop < threshold) { // Si le scroll est inférieur au délai
+      opacity = 0; // Opacité 0
+    }  else { // Sinon
+      if (noAnimate) { // Si on ne veut pas animer
+        opacity = 1; // L'opacité Maximum est de 1
+      } else { // Sinon
+        opacity = (scrollTop - threshold) / fadeLength; // L'opacité s'adapte à la position du scroll pour atteindre 0 < 1
       }
     }
 
-    divFade.css("opacity", opacity);
+    divFade.css("opacity", opacity); 
   };
 
-  toggleHeader(true);
-  $(window).scroll(function () {
-    toggleHeader();
+  toggleHeader(true); // On affiche le header au départ
+  $(window).scroll(function () { // On ajoute un écouteur scroll
+    toggleHeader(); // On affiche le header
   });
 });
+
 
 /*
   transform: matrix(1, 0, 0, 1, 0, 100); opacity: 0;
