@@ -48,20 +48,25 @@ setInterval(function () {
 
 // ANIMATION OPACITY ON SCROLL
 
- $(function () {
+$(function () {
   divFade = $(".title-restaurant, .soustitle-restaurant"); // select the element
 
-  var toggleHeader = function (noAnimate) { // function to toggle the header
+  var toggleHeader = function (noAnimate) {
+    // function to toggle the header
     var threshold = 400, // Délai d'affichage en ms
       fadeLength = 300, // Longueur fondu animation
       opacity, // Opacité
       scrollTop = $(document).scrollTop(); // Position du scroll
-    if (scrollTop < threshold) { // Si le scroll est inférieur au délai
+    if (scrollTop < threshold) {
+      // Si le scroll est inférieur au délai
       opacity = 0; // Opacité 0
-    }  else { // Sinon
-      if (noAnimate) { // Si on ne veut pas animer
-        opacity <=  1; // L'opacité Maximum est de 1
-      } else { // Sinon
+    } else {
+      // Sinon
+      if (noAnimate) {
+        // Si on ne veut pas animer
+        opacity <= 1; // L'opacité Maximum est de 1
+      } else {
+        // Sinon
         opacity = (scrollTop - threshold) / fadeLength; // L'opacité s'adapte à la position du scroll pour atteindre 0 < 1
       }
     }
@@ -70,30 +75,25 @@ setInterval(function () {
   };
 
   toggleHeader(true); // On affiche le header au départ
-  $(window).scroll(function () { // On ajoute un écouteur scroll
+  $(window).scroll(function () {
+    // On ajoute un écouteur scroll
     toggleHeader(); // On affiche le header
   });
 });
 
-
-
 // index.js
 window.onscroll = function () {
   scrollRotate();
-  
 };
 
 function scrollRotate() {
   let mockup_rotate = document.getElementById("reload");
-  mockup_rotate.style.transform = "rotate(" + window.pageYOffset/ -122 + "deg)" ;
+  mockup_rotate.style.transform =
+    "rotate(" + window.pageYOffset / -122 + "deg)";
   mockup_rotate.style.animationDuration = "transform 19000s";
-  
+
   // Définir un degré maxium de rotation ou définir que dès que l'on ne voit plus le mockup il s'arrete de tourner
-  
-};
-
-
-
+}
 
 /*
   transform: matrix(1, 0, 0, 1, 0, 100); opacity: 0;
@@ -102,7 +102,7 @@ to
 
   */
 
-  /* $(function () {
+/* $(function () {
   divFade = $(".title-restaurant, .soustitle-restaurant"); // select the element
 
   var toggleHeader = function (noAnimate) { // function to toggle the header

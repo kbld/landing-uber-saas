@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -360,7 +360,6 @@ li {
   padding: 60px 50px;
 }
 
-
 .img-mockup {
   width: 420px;
   height: auto;
@@ -368,11 +367,9 @@ li {
   margin: 0 auto;
   object-fit: contain;
   position: relative;
-
 }
 
-
-.box-mockup{
+.box-mockup {
   position: relative;
 }
 
@@ -381,21 +378,20 @@ li {
   width: 500px;
   margin-left: -60px;
   animation: floatAnim 10s ease-in-out infinite;
-  
 }
 
 @keyframes floatAnim {
   0% {
     transform: rotateZ(10deg);
-}
+  }
 
-50% {
+  50% {
     transform: rotateZ(5deg);
-}
+  }
 
-100% {
+  100% {
     transform: rotateZ(10deg);
-}
+  }
 }
 
 .title-restaurant {
@@ -650,8 +646,3 @@ li {
 }
 
 /* ANIMATION CSS */
-
-
-
-
-
