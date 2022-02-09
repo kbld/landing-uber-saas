@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -423,7 +423,7 @@ li {
 .box-text-app {
   display: block;
   justify-content: space-between;
-  padding: 200px 50px;
+  padding: 170px 50px;
 }
 
 /* MOCKUP */
