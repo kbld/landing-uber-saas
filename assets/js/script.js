@@ -77,6 +77,37 @@ setInterval(function () {
 
 
 
+// index.js
+window.onscroll = function () {
+  scrollRotate();
+};
+
+function scrollRotate() {
+  let mockup_rotate = document.getElementById("reload");
+  mockup_rotate.style.transform = "rotate(" + window.pageYOffset/-122 + "deg)";
+  "deg" <= -10;
+  
+  // Définir un degré maxium de rotation ou définir que dès que l'on ne voit plus le mockup il s'arrete de tourner
+  
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ScrollFade 0.1
 

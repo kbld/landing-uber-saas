@@ -368,7 +368,7 @@ li {
   margin: 0 auto;
   object-fit: contain;
   position: relative;
-  animation: floatAnim-invert 10s ease-in-out infinite;
+
 }
 
 
@@ -398,26 +398,11 @@ li {
 }
 }
 
-@keyframes floatAnim-invert {
-  0% {
-    transform: rotateZ(5deg);
-}
-
-50% {
-    transform: rotateZ(7deg);
-}
-
-100% {
-    transform: rotateZ(5deg);
-}
-}
-
 .title-restaurant {
   color: var(--color-black);
   font-size: 32px;
   text-align: left;
   font-weight: 600;
-  animation: float 2s ease-in-out infinite;
 }
 
 .soustitle-restaurant {
@@ -426,7 +411,6 @@ li {
   text-align: left;
   font-weight: 400;
   margin-top: 30px;
-  animation: float 2s ease-in-out infinite;
 }
 
 .title-restaurant {
