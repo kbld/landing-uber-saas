@@ -20,7 +20,7 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-const decompteDateFinale = new Date("march 1, 2022 00:00:00").getTime();
+const decompteDateFinale = new Date("march 15, 2022 00:00:00").getTime();
 
 function decompte() {
   let now = new Date().getTime();
@@ -48,7 +48,7 @@ setInterval(function () {
 
 // ANIMATION OPACITY ON SCROLL
 
-$(function () {
+ $(function () {
   divFade = $(".title-restaurant, .soustitle-restaurant"); // select the element
 
   var toggleHeader = function (noAnimate) { // function to toggle the header
@@ -60,13 +60,13 @@ $(function () {
       opacity = 0; // Opacité 0
     }  else { // Sinon
       if (noAnimate) { // Si on ne veut pas animer
-        opacity = 1; // L'opacité Maximum est de 1
+        opacity <=  1; // L'opacité Maximum est de 1
       } else { // Sinon
         opacity = (scrollTop - threshold) / fadeLength; // L'opacité s'adapte à la position du scroll pour atteindre 0 < 1
       }
     }
 
-    divFade.css("opacity", opacity); 
+    divFade.css("opacity", opacity);
   };
 
   toggleHeader(true); // On affiche le header au départ
@@ -76,9 +76,148 @@ $(function () {
 });
 
 
+
+
+// ScrollFade 0.1
+
+var fadeElements = document.getElementsByClassName('scrollFade');
+
+function scrollFade() {
+	var viewportBottom = window.scrollY + window.innerHeight;
+
+	for (var index = 0; index < fadeElements.length; index++) {
+		var element = fadeElements[index];
+		var rect = element.getBoundingClientRect();
+
+		var elementFourth = rect.height/4;
+		var fadeInPoint = window.innerHeight - elementFourth;
+		var fadeOutPoint = -(rect.height/2);
+
+		if (rect.top <= fadeInPoint) {
+			element.classList.add('scrollFade--visible');
+			element.classList.add('scrollFade--animate');
+			element.classList.remove('scrollFade--hidden');
+		} else {
+			element.classList.remove('scrollFade--visible');
+			element.classList.add('scrollFade--hidden');
+		}
+
+		if (rect.top <= fadeOutPoint) {
+			element.classList.remove('scrollFade--visible');
+			element.classList.add('scrollFade--hidden');
+		}
+	}
+}
+
+document.addEventListener('scroll', scrollFade);
+window.addEventListener('resize', scrollFade);
+document.addEventListener('DOMContentLoaded', function() {
+    scrollFade();
+});
+
+
+
+
+
+
+
+
+
+
+
+$(function(){  // $(document).ready shorthand
+  $('.monster').fadeIn('slow');
+});
+
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},1500);
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
   transform: matrix(1, 0, 0, 1, 0, 100); opacity: 0;
 to
   transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;
 
   */
+
+
+
+
+
+
+
+
+  /* $(function () {
+  divFade = $(".title-restaurant, .soustitle-restaurant"); // select the element
+
+  var toggleHeader = function (noAnimate) { // function to toggle the header
+    var threshold = 400, // Délai d'affichage en ms
+      fadeLength = 300, // Longueur fondu animation
+      opacity, // Opacité
+      transform,
+      scrollTop = $(document).scrollTop(); // Position du scroll
+    if (scrollTop < threshold) { // Si le scroll est inférieur au délai
+      opacity = 0; // Opacité 0
+      transform = "translateY(0)"; // Translation 0
+    }  else { // Sinon
+      if (noAnimate) { // Si on ne veut pas animer
+        opacity = 1; // L'opacité Maximum est de 1
+        transform = "translateY(0)"; // Translation 0
+      } else { // Sinon
+        opacity = (scrollTop - threshold) / fadeLength; // L'opacité s'adapte à la position du scroll pour atteindre 0 < 1
+        transform = "translateY(-" + (scrollTop - threshold) + "px)"; // Translation en fonction de la position du scroll
+      }
+    }
+
+    divFade.css("opacity", opacity);
+    divFade.css("transform", transform);  
+  };
+
+  toggleHeader(true); // On affiche le header au départ
+  $(window).scroll(function () { // On ajoute un écouteur scroll
+    toggleHeader(); // On affiche le header
+  });
+}); */

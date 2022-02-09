@@ -360,14 +360,56 @@ li {
   padding: 60px 50px;
 }
 
+
 .img-mockup {
-  width: 450px;
+  width: 420px;
   height: auto;
   display: block;
   margin: 0 auto;
-  background-color: var(--color-white);
-  border-radius: 5px;
   object-fit: contain;
+  position: relative;
+  animation: floatAnim-invert 10s ease-in-out infinite;
+}
+
+
+.box-mockup{
+  position: relative;
+}
+
+.floating-island {
+  position: absolute;
+  width: 500px;
+  margin-left: -60px;
+  animation: floatAnim 10s ease-in-out infinite;
+  
+}
+
+@keyframes floatAnim {
+  0% {
+    transform: rotateZ(10deg);
+}
+
+50% {
+    transform: rotateZ(5deg);
+}
+
+100% {
+    transform: rotateZ(10deg);
+}
+}
+
+@keyframes floatAnim-invert {
+  0% {
+    transform: rotateZ(5deg);
+}
+
+50% {
+    transform: rotateZ(7deg);
+}
+
+100% {
+    transform: rotateZ(5deg);
+}
 }
 
 .title-restaurant {
@@ -375,7 +417,7 @@ li {
   font-size: 32px;
   text-align: left;
   font-weight: 600;
-  opacity: 1;
+  animation: float 2s ease-in-out infinite;
 }
 
 .soustitle-restaurant {
@@ -384,12 +426,20 @@ li {
   text-align: left;
   font-weight: 400;
   margin-top: 30px;
+  animation: float 2s ease-in-out infinite;
 }
 
+.title-restaurant {
+  color: var(--color-black);
+  font-size: 32px;
+  text-align: left;
+  font-weight: 600;
+  opacity: 0;
+}
 .box-text-app {
   display: block;
   justify-content: space-between;
-  padding: 220px 20px;
+  padding: 200px 50px;
 }
 
 /* MOCKUP */
@@ -616,3 +666,8 @@ li {
 }
 
 /* ANIMATION CSS */
+
+
+
+
+
