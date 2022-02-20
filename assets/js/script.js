@@ -90,7 +90,6 @@ function scrollRotate() {
   let mockup_rotate = document.getElementById("reload");
   mockup_rotate.style.transform =
     "rotate(" + window.pageYOffset / -122 + "deg)";
-  mockup_rotate.style.animationDuration = "transform 19000s";
 
   // Définir un degré maxium de rotation ou définir que dès que l'on ne voit plus le mockup il s'arrete de tourner
 }
