@@ -1,30 +1,32 @@
+/* Configuration d'éléments principaux et mise en place d'une charte graphique*/
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-}
 
-$color-white: #fff;
-$color-black: #000;
-$color-green: rgb(54, 220, 164);
-$color-green-hover: rgb(58, 189, 145);
-$color-grey: #747474;
-$color-grey-navbar: #333333;
-$color-back-faq: #f8f8f8;
-$color-grey-2e3333: #2e3333;
-$border-radius-5: 5px;
+  $color-white: #fff;
+  $color-black: #000;
+  $color-green: rgb(54, 220, 164);
+  $color-green-hover: rgb(58, 189, 145);
+  $color-grey: #747474;
+  $color-grey-navbar: #333333;
+  $color-back-faq: #f8f8f8;
+  $color-grey-2e3333: #2e3333;
+  $border-radius-5: 5px;
 
-body {
-  background-color: $color-white;
-}
+  body {
+    background-color: $color-white;
+  }
 
-a,
-li {
-  text-decoration: none;
-  list-style-type: none;
-  color: $color-white;
+  a,
+  li {
+    text-decoration: none;
+    list-style-type: none;
+    color: $color-white;
+  }
 }
+/* Configuration d'éléments principaux et mise en place d'une charte graphique FIN */
 
 .max-1200px {
   display: block;
@@ -60,6 +62,8 @@ li {
     }
   }
 }
+
+/* NAVBAR FIN */
 
 /* MAIN BACKGROUND */
 
@@ -127,7 +131,7 @@ li {
   }
 }
 
-/* MAIN BACKGROUND */
+/* MAIN BACKGROUND FIN */
 
 /* IMG SEPARATOR */
 
@@ -145,193 +149,7 @@ li {
   margin-top: -150px;
 }
 
-/* IMG SEPARATOR */
-
-/* DOWNLOAD */
-
-.box-app {
-  background-color: $color-white;
-  max-width: 750px;
-  display: block;
-  margin: 0 auto;
-  padding: 90px 0px;
-
-  .img-mobile-app {
-    width: 80px;
-    object-fit: contain;
-    vertical-align: bottom;
-  }
-  .txt-app-download {
-    color: $color-black;
-    font-size: 32px;
-    font-weight: 500;
-    padding: 0px 50px;
-  }
-
-  .box-icon-store {
-    display: flex;
-    padding: 40px 0px 0px 0px;
-    margin-left: -10px;
-  }
-
-  .link-app {
-    cursor: pointer;
-    width: 200px;
-  }
-
-  .box-app-title {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-/* DOWNLOAD */
-
-/* COUNTDOWN */
-
-.box-green {
-  background-image: url("../img/zone-green.png");
-  background-position: center;
-  background-size: cover;
-
-  .box-countdown {
-    text-align: center;
-    padding: 50px 0px;
-    font-size: 20px;
-    margin: 0 auto;
-  }
-
-  .mainbox-countdown {
-    @extend .max-1200px;
-    text-align: center;
-    padding: 150px 0px;
-    font-size: 20px;
-  }
-
-  .box-count {
-    background-color: $color-white;
-    border-radius: $border-radius-5;
-    font-size: 18px;
-    margin: 20px;
-    padding: 40px;
-    width: 180px;
-    display: inline-block;
-    list-style-type: none;
-    text-transform: uppercase;
-    color: $color-black;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .count-number {
-    font-weight: 500;
-    font-size: 70px;
-    color: $color-black;
-    display: block;
-  }
-
-  .title-countdown {
-    color: $color-white;
-    font-size: 40px;
-    text-align: center;
-    font-weight: 500;
-    margin: 0px 50px;
-  }
-}
-
-/* COUNTDOWN */
-
-/* FAQ */
-
-.box-faq {
-  @extend .max-1200px;
-  background-color: $color-back-faq;
-  border-radius: $border-radius-5;
-  padding: 50px 70px;
-  margin-top: 40px;
-
-  .main-box-faq {
-    margin: 40px 50px 0px 50px;
-  }
-
-  .title-faq {
-    color: $color-black;
-    font-size: 32px;
-    font-weight: 600;
-    padding: 20px 0px 30px 0px;
-  }
-
-  .list-item {
-    background: $color-white;
-    border-radius: $border-radius-5;
-    margin-bottom: 20px;
-    padding: 10px;
-    box-shadow: 0 2px 6px rgba(50, 50, 90, 0.1);
-    margin-top: 30px;
-  }
-
-  .faq-title {
-    cursor: pointer;
-    padding: 10px 0px 10px 10px;
-    font-size: 18px;
-    font-weight: 400;
-    color: $color-black;
-    user-select: none;
-    &::after { /* Bouton + -> x qui permet d'afficher la réponse */
-      content: "+";
-      float: right;
-      transition: transform 0.3s ease;
-      font-size: 27px;
-      margin-left: 20px;
-    }
-  }
-
-  .faq-content {
-    padding: 10px;
-    color: $color-grey-2e3333;
-    font-size: 16px;
-    display: none;
-    line-height: 22px;
-  }
-
-  .faq-content-title {
-    padding: 10px 0px;
-    color: $color-black;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 22px;
-  }
-
-  .trigger-input {
-    display: none;
-  }
-
-  .trigger-input:checked + .trigger-wrapper .faq-content {
-    display: block;
-    animation: animation-faq 1s;
-  }
-
-  @keyframes animation-faq {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-
-  .trigger-input:checked + .trigger-wrapper .faq-title::after {
-    transform: rotate(45deg) scale(1.08);
-  }
-
-  .trigger-wrapper {
-    padding: 20px;
-  }
-}
-
-/* FAQ */
+/* IMG SEPARATOR FIN */
 
 /* MOCKUP */
 
@@ -399,7 +217,194 @@ li {
     padding: 170px 50px;
   }
 }
-/* MOCKUP */
+/* MOCKUP FIN */
+
+/* COUNTDOWN */
+
+.box-green {
+  background-image: url("../img/zone-green.png");
+  background-position: center;
+  background-size: cover;
+
+  .box-countdown {
+    text-align: center;
+    padding: 50px 0px;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+
+  .mainbox-countdown {
+    @extend .max-1200px;
+    text-align: center;
+    padding: 150px 0px;
+    font-size: 20px;
+  }
+
+  .box-count {
+    background-color: $color-white;
+    border-radius: $border-radius-5;
+    font-size: 18px;
+    margin: 20px;
+    padding: 40px;
+    width: 180px;
+    display: inline-block;
+    list-style-type: none;
+    text-transform: uppercase;
+    color: $color-black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .count-number {
+    font-weight: 500;
+    font-size: 70px;
+    color: $color-black;
+    display: block;
+  }
+
+  .title-countdown {
+    color: $color-white;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 500;
+    margin: 0px 50px;
+  }
+}
+
+/* COUNTDOWN FIN */
+
+/* FAQ */
+
+.box-faq {
+  @extend .max-1200px;
+  background-color: $color-back-faq;
+  border-radius: $border-radius-5;
+  padding: 50px 70px;
+  margin-top: 40px;
+
+  .main-box-faq {
+    margin: 40px 50px 0px 50px;
+  }
+
+  .title-faq {
+    color: $color-black;
+    font-size: 32px;
+    font-weight: 600;
+    padding: 20px 0px 30px 0px;
+  }
+
+  .list-item {
+    background: $color-white;
+    border-radius: $border-radius-5;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(50, 50, 90, 0.1);
+    margin-top: 30px;
+  }
+
+  .faq-title {
+    cursor: pointer;
+    padding: 10px 0px 10px 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: $color-black;
+    user-select: none;
+    &::after {
+      /* Bouton + -> x qui permet d'afficher la réponse */
+      content: "+";
+      float: right;
+      transition: transform 0.3s ease;
+      font-size: 27px;
+      margin-left: 20px;
+    }
+  }
+
+  .faq-content {
+    padding: 10px;
+    color: $color-grey-2e3333;
+    font-size: 16px;
+    display: none;
+    line-height: 22px;
+  }
+
+  .faq-content-title {
+    padding: 10px 0px;
+    color: $color-black;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  .trigger-input {
+    display: none;
+  }
+
+  .trigger-input:checked + .trigger-wrapper .faq-content {
+    display: block;
+    animation: animation-faq 1s;
+  }
+
+  @keyframes animation-faq {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .trigger-input:checked + .trigger-wrapper .faq-title::after {
+    transform: rotate(45deg) scale(1.08);
+  }
+
+  .trigger-wrapper {
+    padding: 20px;
+  }
+}
+
+/* FAQ FIN */
+
+/* DOWNLOAD */
+
+.box-app {
+  background-color: $color-white;
+  max-width: 750px;
+  display: block;
+  margin: 0 auto;
+  padding: 90px 0px;
+
+  .img-mobile-app {
+    width: 80px;
+    object-fit: contain;
+    vertical-align: bottom;
+  }
+  .txt-app-download {
+    color: $color-black;
+    font-size: 32px;
+    font-weight: 500;
+    padding: 0px 50px;
+  }
+
+  .box-icon-store {
+    display: flex;
+    padding: 40px 0px 0px 0px;
+    margin-left: -10px;
+  }
+
+  .link-app {
+    cursor: pointer;
+    width: 200px;
+  }
+
+  .box-app-title {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* DOWNLOAD FIN */
 
 /* FOOTER */
 
@@ -469,7 +474,44 @@ li {
   }
 }
 
-/* FOOTER */
+/* FOOTER FIN */
+
+/* ANIMATION CSS */
+
+.reveal {
+  position: relative;
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active {
+  opacity: 1;
+}
+
+.reveal-title {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-title.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.reveal-p {
+  position: relative;
+  transform: translateY(70px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-p.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ANIMATION CSS FIN*/
 
 /* RESPONSIVE */
 
@@ -567,57 +609,20 @@ li {
 }
 
 @media only screen and (max-width: 845px) {
-    .box-link-footer-right {
-      display: flex;
-      flex-direction: column;
-      margin-top: 30px;
-    }
-    .box-copyrightpluslink {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-    .link-footer {
-      margin: 20px 0px;
-    }
-    .title-copyright {
-      margin-top: 20px;
-    }
+  .box-link-footer-right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
   }
-  /* RESPONSIVE */
-  
-  /* ANIMATION CSS */
-  
-  .reveal {
-    position: relative;
-    opacity: 0;
-    transition: 2s all ease;
+  .box-copyrightpluslink {
+    display: flex;
+    flex-direction: column-reverse;
   }
-  .reveal.active {
-    opacity: 1;
+  .link-footer {
+    margin: 20px 0px;
   }
-  
-  .reveal-title {
-    position: relative;
-    transform: translateY(50px);
-    opacity: 0;
-    transition: 1s all ease;
+  .title-copyright {
+    margin-top: 20px;
   }
-  
-  .reveal-title.active {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  
-  .reveal-p {
-    position: relative;
-    transform: translateY(70px);
-    opacity: 0;
-    transition: 1s all ease;
-  }
-  
-  .reveal-p.active {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  
-  /* ANIMATION CSS */
+}
+/* RESPONSIVE */
