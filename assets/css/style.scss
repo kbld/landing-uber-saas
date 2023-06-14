@@ -5,25 +5,21 @@
   margin: 0;
   padding: 0;
 
-  $color-white: #fff;
-  $color-black: #000;
-  $color-green: rgb(54, 220, 164);
-  $color-green-hover: rgb(58, 189, 145);
-  $color-grey: #747474;
-  $color-grey-navbar: #333333;
-  $color-back-faq: #f8f8f8;
-  $color-grey-2e3333: #2e3333;
-  $border-radius-5: 5px;
-
   body {
-    background-color: $color-white;
+    background-color: #fff;
   }
 
   a,
   li {
     text-decoration: none;
     list-style-type: none;
-    color: $color-white;
+    color: #fff;
+  }
+  a,
+  button,
+  input {
+    border: none;
+    outline: none;
   }
 }
 /* Configuration d'éléments principaux et mise en place d'une charte graphique FIN */
@@ -43,21 +39,21 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 30px 50px;
+  padding: 25px 50px;
   height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $color-black;
+  background: #000;
   z-index: 9999;
-  border-bottom: 1px solid $color-grey-navbar;
+  border-bottom: 1px solid #333333;
   .box-navbar {
     @extend .max-1200px;
     .logo {
       display: block;
       margin: 0 auto;
       padding: 10px 0 10px 0;
-      width: 230px;
+      width: 210px;
       background: url("../img/UEPREMIUM-logo.svg") center no-repeat;
     }
   }
@@ -72,56 +68,62 @@
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 900px;
+  height: 80vh;
   background-repeat: no-repeat;
   padding: 300px 0px;
   background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .main-title {
-    color: $color-white;
-    font-size: 40px;
+    color: #fff;
+    font-size: 30px;
     text-align: left;
     font-weight: 500;
   }
 
   .title-newsletter {
-    color: $color-white;
-    font-size: 25px;
+    color: #fff;
+    font-size: 18px;
     text-align: left;
     font-weight: 400;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
-  .input-newsletter {
-    color: $color-black;
-    background-color: $color-white;
-    font-size: 16px;
-    text-align: left;
-    font-weight: 500;
-    padding: 18px 20px;
-    outline: none;
-    border: none;
-    margin-top: 30px;
-    width: 450px;
-    &::placeholder {
-      color: rgb(151, 151, 151);
+  .box-input {
+    display: flex;
+    margin: 10px 0px;
+
+    .input-newsletter {
+      color: #000;
+      background-color: #fff;
+      font-size: 14px;
+      text-align: left;
       font-weight: 500;
-    }
-  }
+      padding: 12px 16px;
 
-  .button-newsletter {
-    color: $color-white;
-    font-size: 16px;
-    font-weight: 500;
-    background-color: $color-green;
-    outline: none;
-    border: none;
-    padding: 18px 50px;
-    margin-left: 10px;
-    cursor: pointer;
-    &:hover {
-      background-color: $color-green-hover;
-      transition: 0.5s;
+      width: 450px;
+      &::placeholder {
+        color: rgb(151, 151, 151);
+        font-weight: 500;
+      }
+    }
+
+    .button-newsletter {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: rgb(54, 220, 164);
+      outline: none;
+      border: none;
+      padding: 12px 16px;
+
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(58, 189, 145);
+        transition: 0.5s;
+      }
     }
   }
 
@@ -159,11 +161,11 @@
   $border-radius-5: 5px;
   @extend .max-1200px;
   display: flex;
-  background-color: $color-white;
-  padding: 60px 50px;
+  background-color: #fff;
+  padding: 20px 50px;
 
   .img-mockup {
-    width: 420px;
+    width: 320px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -173,6 +175,7 @@
 
   .box-mockup {
     position: relative;
+    width: 40%;
   }
 
   .floating-island {
@@ -197,16 +200,16 @@
   }
 
   .soustitle-restaurant {
-    color: $color-black;
-    font-size: 22px;
+    color: #000;
+    font-size: 15px;
     text-align: left;
     font-weight: 400;
     margin-top: 30px;
   }
 
   .title-restaurant {
-    color: $color-black;
-    font-size: 32px;
+    color: #000;
+    font-size: 25px;
     text-align: left;
     font-weight: 600;
     opacity: 0;
@@ -215,6 +218,7 @@
     display: block;
     justify-content: space-between;
     padding: 170px 50px;
+    width: 60%;
   }
 }
 /* MOCKUP FIN */
@@ -222,13 +226,13 @@
 /* COUNTDOWN */
 
 .box-green {
-  background-image: url("../img/zone-green.png");
+  background-image: url("/assets/img/back-green.png");
   background-position: center;
   background-size: cover;
 
   .box-countdown {
     text-align: center;
-    padding: 50px 0px;
+    padding: 20px 0px;
     font-size: 20px;
     margin: 0 auto;
   }
@@ -236,37 +240,38 @@
   .mainbox-countdown {
     @extend .max-1200px;
     text-align: center;
-    padding: 150px 0px;
+    padding: 70px 0px;
     font-size: 20px;
   }
 
   .box-count {
-    background-color: $color-white;
-    border-radius: $border-radius-5;
+    background-color: #fff;
+    border-radius: 5px;
     font-size: 18px;
     margin: 20px;
-    padding: 40px;
-    width: 180px;
+    padding: 20px;
+    width: 140px;
     display: inline-block;
     list-style-type: none;
-    text-transform: uppercase;
-    color: $color-black;
+    color: #000;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
 
   .count-number {
     font-weight: 500;
-    font-size: 70px;
-    color: $color-black;
-    display: block;
+    font-size: 30px;
+    color: #000;
   }
 
   .title-countdown {
-    color: $color-white;
-    font-size: 40px;
+    color: #fff;
+    font-size: 25px;
     text-align: center;
     font-weight: 500;
     margin: 0px 50px;
+  }
+  p {
+    font-size: 16px;
   }
 }
 
@@ -276,9 +281,9 @@
 
 .box-faq {
   @extend .max-1200px;
-  background-color: $color-back-faq;
-  border-radius: $border-radius-5;
-  padding: 50px 70px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding: 20px 40px;
   margin-top: 40px;
 
   .main-box-faq {
@@ -286,15 +291,15 @@
   }
 
   .title-faq {
-    color: $color-black;
-    font-size: 32px;
+    color: #000;
+    font-size: 25px;
     font-weight: 600;
-    padding: 20px 0px 30px 0px;
+    padding: 30px 0px 10px 0px;
   }
 
   .list-item {
-    background: $color-white;
-    border-radius: $border-radius-5;
+    background: #fff;
+    border-radius: 5px;
     margin-bottom: 20px;
     padding: 10px;
     box-shadow: 0 2px 6px rgba(50, 50, 90, 0.1);
@@ -304,14 +309,16 @@
   .faq-title {
     cursor: pointer;
     padding: 10px 0px 10px 10px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
-    color: $color-black;
+    color: #000;
     user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     &::after {
       /* Bouton + -> x qui permet d'afficher la réponse */
       content: "+";
-      float: right;
       transition: transform 0.3s ease;
       font-size: 27px;
       margin-left: 20px;
@@ -320,7 +327,7 @@
 
   .faq-content {
     padding: 10px;
-    color: $color-grey-2e3333;
+    color: #2e3333;
     font-size: 16px;
     display: none;
     line-height: 22px;
@@ -328,7 +335,7 @@
 
   .faq-content-title {
     padding: 10px 0px;
-    color: $color-black;
+    color: #000;
     font-size: 18px;
     font-weight: 600;
     line-height: 22px;
@@ -360,7 +367,7 @@
   }
 
   .trigger-wrapper {
-    padding: 20px;
+    padding: 10px;
   }
 }
 
@@ -369,7 +376,7 @@
 /* DOWNLOAD */
 
 .box-app {
-  background-color: $color-white;
+  background-color: #fff;
   max-width: 750px;
   display: block;
   margin: 0 auto;
@@ -381,8 +388,8 @@
     vertical-align: bottom;
   }
   .txt-app-download {
-    color: $color-black;
-    font-size: 32px;
+    color: #000;
+    font-size: 26px;
     font-weight: 500;
     padding: 0px 50px;
   }
@@ -395,12 +402,13 @@
 
   .link-app {
     cursor: pointer;
-    width: 200px;
+    width: 160px;
   }
 
   .box-app-title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -410,40 +418,40 @@
 
 .footer {
   width: 100%;
-  background-color: $color-black;
+  background-color: #000;
   height: auto;
 
   .box-footer {
     @extend .max-1200px;
-    padding: 50px 50px;
+    padding: 20px 50px;
     bottom: 0;
     left: 0;
   }
 
   .box-logo {
-    border-bottom: 1px solid $color-grey;
+    border-bottom: 1px solid #747474;
     padding: 20px 0px;
   }
 
   .logo-footer {
     display: block;
     padding: 10px 0;
-    width: 240px;
+    width: 200px;
     background: url("../img/UEPREMIUM-logo-white.svg") center no-repeat;
-    fill: $color-white;
+    fill: #fff;
   }
 
   .link-footer {
-    color: $color-white;
+    color: #fff;
     margin: 0px 0px 0px 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     display: flex;
     border-bottom: 1px solid transparent;
     &:hover {
-      color: $color-white;
-      border-bottom: 1px solid $color-white;
+      color: #fff;
+      border-bottom: 1px solid #fff;
     }
   }
 
@@ -467,8 +475,8 @@
   }
 
   .title-copyright {
-    color: $color-grey;
-    font-size: 16px;
+    color: #747474;
+    font-size: 14px;
     font-weight: 500;
     text-align: left;
   }

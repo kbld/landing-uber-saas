@@ -20,7 +20,7 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-const decompteDateFinale = new Date("march 15, 2022 00:00:00").getTime();
+const decompteDateFinale = new Date("sept 15, 2023 00:00:00").getTime();
 
 function decompte() {
   let now = new Date().getTime();
